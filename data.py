@@ -1,5 +1,7 @@
+"""Separate sql handler module"""
+
 import psycopg2
-from main import print_table
+import main
 
 
 def back():
