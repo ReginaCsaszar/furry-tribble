@@ -21,7 +21,7 @@ h1 {
 }
 
 h2 {
-    margin-left:125px;
+    margin-left: 125px;
     font-size: 32px;
     color: #999999;
 }
@@ -31,8 +31,8 @@ section {
 }
 
 section p {
-    margin-left:150px;
-    margin-right:150px;
+    margin-left: 150px;
+    margin-right: 150px;
 }
 
 #error {
@@ -44,8 +44,7 @@ table {
     border: 1px solid #bfbfbf;
     border-collapse: collapse;
     width: auto;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 150px;
 }
 
 th {
