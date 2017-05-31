@@ -9,7 +9,7 @@ def identify():
 
 
 def main():
-    print("This script only set the database connection. Try 'main.py' to run Application process.")
+    print("Error. Start 'main.py'")
 
 if __name__ == '__main__':
     main()
