@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
+  
   <head>
     <link rel="stylesheet" href="/static/style.css">
     <title>Application process</title>
   </head>
+  
   <body>
     <h1 id="top">{{ content[1] }}</h1>
+    
     <section>
       <h2>Description</h2>
       <p>{{ content[2] }}<br>{{ content[3] }}</p>
       <h2>Result</h2>
+      
       <table>
         <tr>
             {% for title in titles %}
@@ -25,16 +29,16 @@
         {% endfor %}
       </table>
     </section>
-    <div class="pagination">
-      {% for row in navi %}
-        <a href="{{ row[0]|safe }}">{{ row[1] }}</a>
-      {% endfor %}
-    </div>
+    
     <footer>
       <nav>
-        <a href="#top" title="Go top of the page"> Up </a> <a href="/index" title="Go back to the links"> Back </a>
+        <a href="#top" title="Go top of the page"> Up </a> 
+        <a href="/index" title="Go back to the links"> Back </a>
       </nav>
-      <p>Brought to you by Jeannie,<br>your friendly coffee and chocolate powered Codecool student</p>
+      <p>
+        Brought to you by Jeannie,
+        <br>a fellow coffee and chocolate powered Codecooler
+      </p>
     </footer>
   </body>
 </html>
