@@ -1,24 +1,24 @@
 /mentors
 Mentors and schools
-On this page you will see the result of a query that returns the name of the mentors plus the name and country of the school (joining with the schools table) ordered by the mentors id column. 
+On this page you will see the result of a query that returns the name of the mentors plus the name and country of the school (joining with the schools table) ordered by the mentors id column.
 Columns: mentors.first_name, mentors.last_name, schools.name, schools.country
 /all-school
 All school
-On this page you will see the result of a query that returns the name of the mentors plus the name and country of the school (joining with the schools table) ordered by the mentors id column. It include all the schools, even if there's no mentor yet. 
+On this page you will see the result of a query that returns the name of the mentors plus the name and country of the school (joining with the schools table) ordered by the mentors id column. It include all the schools, even if there's no mentor yet.
 Columns: mentors.first_name, mentors.last_name, schools.name, schools.country
 /mentors-by-country
 Country
-On this page you will see the result of a query that returns the number of the mentors per country, ordered by the name of the countries. 
+On this page you will see the result of a query that returns the number of the mentors per country, ordered by the name of the countries.
 Columns: country, count
 /contacts
 Contacts
-On this page you will see the result of a query that returns the name of the school plus the name of contact person at the school (from the mentors table), ordered by the name of the school. 
+On this page you will see the result of a query that returns the name of the school plus the name of contact person at the school (from the mentors table), ordered by the name of the school.
 Columns: schools.name, mentors.first_name, mentors.last_name
 /applicants
 Applicants
-On this page you will see the result of a query that returns the first name and the code of the applicants, plus the creation_date of the application (joining with the applicants_mentors table), ordered by the creation_date in descending order, but only for applications later than 2016-01-01. 
+On this page you will see the result of a query that returns the first name and the code of the applicants, plus the creation_date of the application (joining with the applicants_mentors table), ordered by the creation_date in descending order, but only for applications later than 2016-01-01.
 Columns: applicants.first_name, applicants.application_code, applicants_mentors.creation_date
 /applicants-and-mentors
 Applicants and mentors
-On this page you will see the result of a query that returns the first name and the code of the applicants, plus the name of the assigned mentor (joining through the applicants_mentors table) ordered by the applicants id column. Shows all the applicants, even if they have no assigned mentor in the database. In this case there will be the string 'None' instead of the mentor name. 
+On this page you will see the result of a query that returns the first name and the code of the applicants, plus the name of the assigned mentor (joining through the applicants_mentors table) ordered by the applicants id column. Shows all the applicants, even if they have no assigned mentor in the database. In this case there will be the string 'None' instead of the mentor name.
 Columns: applicants.first_name, applicants.application_code, mentor_first_name, mentor_last_name
