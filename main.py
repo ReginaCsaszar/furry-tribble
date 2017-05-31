@@ -21,28 +21,28 @@ def index_route():
 
 @app.route("/mentors")
 def mentors():
-    titles = ["First name", "Last name", "Schools name", "Country"]
+    titles = ["Mentor's first name", "Mentor's last name", "Schools name", "Schools country"]
     table = data.get_results("SELECT * FROM mentors")
     return render_template('list.html', data=table, titles=titles, content=content[0])
 
 
 @app.route("/all-school")
 def all_school():
-    titles = ["First name", "Last name", "Schools name", "Country"]
+    titles = ["Mentor's first name", "Mentor's last name", "Schools name", "Schools country"]
     table = data.get_results("SELECT * FROM mentors")
     return render_template('list.html', data=table, titles=titles, content=content[1])
 
 
 @app.route("/mentors-by-country")
 def mentors_by_country():
-    titles = ["Country", "Count"]
+    titles = ["Country", "Number of mentors"]
     table = data.get_results("SELECT * FROM mentors")
     return render_template('list.html', data=table, titles=titles, content=content[2])
 
 
 @app.route("/contacts")
 def contacts():
-    titles = ["Scool's name", "First name", "Last name"]
+    titles = ["Scool's name", "Mentor's first name", "Mentor's last name"]
     table = data.get_results("SELECT * FROM mentors")
     return render_template('list.html', data=table, titles=titles, content=content[3])
 
