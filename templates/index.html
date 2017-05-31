@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Application process</title>
+  </head>
+  <body>
+    <h1 id="top">Application process</h1>
+    <section>
+        {% for row in content %}
+        <h2><a href="{{ row[0] }}">{{ row[1] }}</a></h2>
+        <p>
+            {{ row[2] }}
+            <br>{{ row[3] }}
+        </p>
+        {% endfor %}
+    </section>
+    <footer>
+      <nav>
+        <a href="#top" title="Go top of the page"> Up </a>
+      </nav>
+      <p>Brought to you by Jeannie,<br>your friendly coffee and chocolate powered Codecool student</p>
+    </footer>
+  </body>
+</html>

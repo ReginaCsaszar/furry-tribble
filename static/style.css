@@ -1,0 +1,122 @@
+body {
+    background-color: white;
+    background-image: url(bglogo.png);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+    font-family: sans-serif;
+}
+
+h1 {
+    background-image: url(logo.png);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 72px;
+    color: #999999;
+    margin: 20px;
+    border-bottom: 1px solid #999999;
+    padding: 5px;
+    padding-left: 85px;
+}
+
+h2 {
+    margin-left:125px;
+    font-size: 32px;
+    color: #999999;
+}
+
+section {
+    margin-top: 50px;
+}
+
+section p {
+    margin-left:150px;
+    margin-right:150px;
+}
+
+#error {
+    margin-top: 20px;
+    margin-bottom: 250px;
+}
+
+table {
+    border: 1px solid #bfbfbf;
+    border-collapse: collapse;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th {
+    padding: 5px;
+    background-color: #d9d9d9;
+    border: 1px solid #bfbfbf;
+    text-align: center;
+} 
+
+td {
+    padding: 5px;
+    border: 1px solid #bfbfbf;
+}
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+footer {
+    margin: 50px 20px 0 20px;
+    text-align: right;
+    font-weight: bold;
+    color: #999999;
+    border-top: 1px solid #999999;
+    padding-top: 10px;    
+}
+a {
+    text-decoration: none;
+    color: #999999;
+}
+
+a:hover {
+    color: #0086b3;
+}
+
+nav a {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 75px;
+    border: 1px solid #bfbfbf;
+    border-radius: 2px;
+    background-color: #f2f2f2;
+    padding: 7px;
+    text-align: center;
+    font-weight: normal;
+    color: black;
+}
+
+nav a:hover {
+    background-color: #d9d9d9;
+    color: black;
+}
+
+.pagination {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.pagination a {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 40px;
+    color: black;
+    padding: 7px;
+}
+
+.pagination a.active {
+    background-color: #d9d9d9;
+    color: black;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #d9d9d9;
+}
