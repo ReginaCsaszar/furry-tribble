@@ -31,7 +31,7 @@ def mentors():
     titles = ["Mentor's first name", "Mentor's last name", "Schools name", "Schools country"]
     table = data.get_results("""SELECT first_name, last_name, schools.name, schools.country
                                 FROM mentors
-                                    INNER JOIN schools
+                                    JOIN schools
                                         ON mentors.city=schools.city
                                 ORDER BY mentors.id DESC;""")
     return render_template('list.html', data=table, titles=titles, content=content[0])
@@ -40,7 +40,7 @@ def mentors():
 @app.route("/all-school")
 def all_school():
     titles = ["Mentor's first name", "Mentor's last name", "Schools name", "Schools country"]
-    table = data.get_results("""SELECT COALESCE(first_name, ''), COALESCE(last_name, ''), schools.name, schools.country
+    table = data.get_results("""SELECT first_name, last_name, schools.name, schools.country
                                 FROM mentors
                                     RIGHT JOIN schools
                                         ON mentors.city=schools.city
@@ -51,10 +51,10 @@ def all_school():
 @app.route("/mentors-by-country")
 def mentors_by_country():
     titles = ["Country", "Number of mentors"]
-    table = data.get_results("""SELECT COUNT(mentors.first_name), schools.country
-                                FROM mentors
-                                    JOIN schools
-                                        ON mentors.city=schools.city
+    table = data.get_results("""SELECT schools.country, COUNT(mentors.first_name)
+                                FROM schools
+                                    JOIN mentors
+                                        ON schools.city=mentors.city
                                 GROUP BY schools.country ORDER BY schools.country ASC;""")
     return render_template('list.html', data=table, titles=titles, content=content[2])
 
@@ -64,7 +64,7 @@ def contacts():
     titles = ["Scool's name", "Mentor's first name", "Mentor's last name"]
     table = data.get_results("""SELECT schools.name, mentors.first_name, mentors.last_name
                                 FROM mentors
-                                    JOIN schools
+                                    RIGHT JOIN schools
                                         ON mentors.id=schools.contact_person
                                 ORDER BY schools.name ASC;""")
     return render_template('list.html', data=table, titles=titles, content=content[3])
